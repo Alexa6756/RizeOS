@@ -16,7 +16,7 @@ export default function Profile() {
     
     const fetchProfile = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:8000/candidate/profile/", {
+        const res = await fetch("https://rize-os-navy.vercel.app/candidate/profile/", {
           headers: { Authorization: `Bearer ${token}` }
         });
         const data = await res.json();
@@ -31,7 +31,7 @@ export default function Profile() {
 
   const handleSave = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/candidate/profile/update/", {
+      const res = await fetch("https://rize-os-navy.vercel.app/candidate/profile/update/", {
         method: "PUT",
         headers: { 
           "Content-Type": "application/json",
