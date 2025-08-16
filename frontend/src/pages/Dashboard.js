@@ -16,7 +16,7 @@ export default function Dashboard() {
   
   useEffect(() => {
     if (!token) navigate("/login");
-    fetch("http://127.0.0.1:8000/candidate/profile/", {
+    fetch("https://rize-os-navy.vercel.app/candidate/profile/", {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => res.json())
@@ -35,7 +35,7 @@ export default function Dashboard() {
   
   useEffect(() => {
     if (!token) return;
-    fetch("http://127.0.0.1:8000/job/list/", {
+    fetch("https://rize-os-navy.vercel.app/job/list/", {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => res.json())
@@ -53,7 +53,7 @@ export default function Dashboard() {
 
   
   const handlePostJob = () => {
-    fetch("http://127.0.0.1:8000/job/create/", {
+    fetch("https://rize-os-navy.vercel.app/job/create/", {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
       body: JSON.stringify({ ...newJob, skills: newJob.skills.split(",").map(s => s.trim()) })
@@ -61,7 +61,7 @@ export default function Dashboard() {
       .then(res => res.json())
       .then(() => {
         setNewJob({ title: "", description: "", skills: "", budget: "" });
-        return fetch("http://127.0.0.1:8000/job/list/", {
+        return fetch("https://rize-os-navy.vercel.app/job/list/", {
           headers: { Authorization: `Bearer ${token}` }
         });
       })
@@ -74,7 +74,7 @@ export default function Dashboard() {
 
   
   const handleProfileUpdate = () => {
-    fetch("http://127.0.0.1:8000/candidate/profile/update/", {
+    fetch("https://rize-os-navy.vercel.app/candidate/profile/update/", {
       method: "PUT",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
       body: JSON.stringify({
