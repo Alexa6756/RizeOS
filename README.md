@@ -103,5 +103,3 @@ npm start
 ## Repository
 
 GitHub: [https://github.com/Alexa6756/RizeOS](https://github.com/Alexa6756/RizeOS)
-
-```
