@@ -1,4 +1,4 @@
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://rize-os-navy.vercel.app";
 
 export async function extractSkills(file) {
   const formData = new FormData();
