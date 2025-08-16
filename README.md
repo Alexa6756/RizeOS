@@ -3,11 +3,10 @@ RizeOS
 
 **RizeOS** — *"Where efficiency meets clarity"* — is a modern web application designed to help users manage personal profiles, post/view jobs, and leverage AI-driven recommendations for career growth.
 
----
 
-##  Features
+ Features
 
-### **Module 1: User Registration & Profile**
+ **Module 1: User Registration & Profile**
 - **Registration/Login** – Secure authentication using JWT or session.
 - **Profile Management**
   - Create or edit profile with:  
@@ -19,9 +18,8 @@ RizeOS
   - Parse uploaded resumes or bios
   - Auto-fill top skills for quicker profile setup
 
----
 
-### **Module 2: Job Posting & Feed**
+ **Module 2: Job Posting & Feed**
 - **Post Jobs** – Users can post jobs with:  
   - Title  
   - Description  
@@ -34,9 +32,9 @@ RizeOS
 - **Smart Suggestions**
   - Recommended jobs or connections based on profile, skills, and past activity
 
----
 
-##  Project Structure
+
+ Project Structure
 
 ```
 
@@ -49,19 +47,18 @@ RizeOS/
 ````
 
 
----
 
-##  Prerequisites
+
+ Prerequisites
 
 - Python 3.9+  
 - Node.js 14+ / npm  
 - Git  
 
----
 
-##  Run Instructions
+  Run Instructions
 
-### ** Clone the repository**
+ ** Clone the repository**
 ```bash
 git clone https://github.com/Alexa6756/RizeOS.git
 
@@ -75,7 +72,7 @@ npm start
 
 
 
-##  Usage
+  Usage
 
 1. Open `http://localhost:3000` in your browser.
 2. Register/login to access the dashboard.
@@ -92,7 +89,7 @@ npm start
 
 
 
-##  Repository
+ Repository
 
 * GitHub: [https://github.com/Alexa6756/RizeOS](https://github.com/Alexa6756/RizeOS)
 
