@@ -1,3 +1,4 @@
+import os
 from fastapi import APIRouter, UploadFile, File, HTTPException, Depends
 from pydantic import BaseModel
 from passlib.context import CryptContext
@@ -5,17 +6,15 @@ from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from typing import Optional
 
-
 from ..services.skill_extraction import extract_text_from_pdf, extract_skills
-
-
 from backend.data.fake_db import candidates_db
 
 router = APIRouter()
 
-
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-SECRET_KEY = "your-secret-key"
+
+
+SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")  
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
@@ -86,7 +85,6 @@ def login(candidate: CandidateLogin):
     access_token = create_access_token(data={"sub": candidate.email})
     return {"access_token": access_token, "token_type": "bearer"}
 
-
 from fastapi.security import OAuth2PasswordBearer
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="candidates/login/")
 
@@ -112,7 +110,6 @@ def read_profile(current_candidate: dict = Depends(get_current_candidate)):
         skills=current_candidate.get("skills", [])
     )
 
-
 @router.put("/profile/update/", response_model=CandidateProfileUpdate)
 def update_profile(updated: CandidateProfileUpdate, current_candidate: dict = Depends(get_current_candidate)):
     email = current_candidate["email"]
@@ -125,7 +122,6 @@ def update_profile(updated: CandidateProfileUpdate, current_candidate: dict = De
     candidates_db[email]["skills"] = updated.skills
     
     return candidates_db[email]
-
 
 @router.post("/extract-skills/")
 async def extract_resume_skills(file: UploadFile = File(...)):
