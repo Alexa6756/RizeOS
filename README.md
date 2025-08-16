@@ -1,7 +1,7 @@
 ```markdown
 RizeOS
 
-**RizeOS** — *"Where efficiency meets clarity"* — is a modern web application designed to help users manage personal profiles, post/view jobs, and leverage AI-driven recommendations for career growth.
+** RizeOS ** — *"Where efficiency meets clarity"* — is a modern web application designed to help users manage personal profiles, post/view jobs, and leverage AI-driven recommendations for career growth.
 
 
  Features
