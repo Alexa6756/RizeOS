@@ -62,8 +62,9 @@ RizeOS/
 git clone https://github.com/Alexa6756/RizeOS.git
 cd RizeOS
 
+
 pip install -r requirements.txt       
-uvicorn app:app --reload              
+uvicorn backend.app:app --reload          
 ```
 
 * Backend runs at: `http://127.0.0.1:8000`
