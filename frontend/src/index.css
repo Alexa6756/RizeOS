@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+h1{
+    color: #f5f1f1;
+  margin-top: 0;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #222;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+header {
+  padding: 15px 40px;
+  background-color: #1a1a1a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+header nav a {
+  margin-right: 20px;
+  color: #61dafb;
+}
+
+header nav a:last-child {
+  margin-right: 0;
+}
+
+
+footer {
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}
+
+
+button {
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #155ab6;
+}
+
+
+input, select, textarea {
+  padding: 8px 12px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 5px rgba(26,115,232,0.3);
+}
+
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+
+.profile-section, .job-post-section, .jobs-list-section {
+  margin-bottom: 30px;
+}
+
+.job-card {
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+
+.home-description {
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+.form-card {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+hr {
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  margin: 30px 0;
+}
