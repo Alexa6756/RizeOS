@@ -2,8 +2,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 from typing import List, Optional
 from backend.routes.candidates import get_current_candidate
-from backend.data.fake_db import jobs_db
-
+from backend.data.jobs_db import jobs_db, save_jobs_db
 from backend.services.matching import match_job_candidate
 
 router = APIRouter()
