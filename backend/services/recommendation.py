@@ -5,8 +5,8 @@ def recommend_jobs(candidate_bio: str, top_n: int = 5):
     candidate_vec = embed_text(candidate_bio)
     scores = []
 
-    for job in jobs_db:
-        job_vec = embed_text(job["description"])
+    for job_id, job in jobs_db.items():
+        job_vec = embed_text(job["description"])  
         score = similarity(candidate_vec, job_vec)
         scores.append((job, score))
 
