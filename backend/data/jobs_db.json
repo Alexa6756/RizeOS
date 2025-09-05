@@ -1,0 +1,14 @@
+{
+  "1": {
+    "id": 1,
+    "title": "AI/ML Engineer",
+    "description": "Build ML models for agriculture",
+    "skills": [
+      "ML",
+      "Data analysis",
+      "Preprocessing"
+    ],
+    "salary": "50K/month",
+    "posted_by": "221128@iiitt.ac.in"
+  }
+}
