@@ -5,7 +5,7 @@ export default function Dashboard() {
   const [profile, setProfile] = useState(null);
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
-  const [newJob, setNewJob] = useState({ title: "", description: "", skills: "", budget: "" });
+  const [newJob, setNewJob] = useState({ title: "", description: "", skills: "", salary: "" });
   const [editingProfile, setEditingProfile] = useState(false);
   const [profileForm, setProfileForm] = useState({ name: "", bio: "", linkedin_url: "", skills: "" });
   const [filters, setFilters] = useState({ skill: "", location: "", tag: "" });
@@ -60,7 +60,7 @@ export default function Dashboard() {
     })
       .then(res => res.json())
       .then(() => {
-        setNewJob({ title: "", description: "", skills: "", budget: "" });
+        setNewJob({ title: "", description: "", skills: "", salary: "" });
         return fetch("https://rize-os-navy.vercel.app/job/list/", {
           headers: { Authorization: `Bearer ${token}` }
         });
